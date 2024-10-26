@@ -398,4 +398,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Rust
+Cargo.lock
 target/
+.vscode/
