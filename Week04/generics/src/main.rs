@@ -123,5 +123,8 @@ fn generic_methods_example02() {
 
 
 // Константни Шаблони
-fn f<T, const N: usize>(_a: [T; N]) {}
+fn _f<T, const N: usize>(_a: [T; N]) {}
 
+fn _constant_generics() {
+    _f::<String, 1>([String::from("Hello"),]);
+}
