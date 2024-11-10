@@ -202,4 +202,4 @@ fn test_fib_split_n_works() {
 fn test_fib_split_n_symmetric_works() {
     println!("{:?}", fib_split_n_symmetric("Lorem ipsum dolor sit amet.", 5)); // debuging purposes
     assert!(fib_split_n_symmetric("Lorem ipsum dolor s📝t amet.", 5) == (vec_of_strings!["L", "o", "re", "m i", "psum ", "dolor", " s📝", "t ", "a", "m"], "et."));
-}В
+}
