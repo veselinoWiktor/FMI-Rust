@@ -1,9 +1,16 @@
-use::std::mem;
-
 fn main() {
-    let myCh: &str = "Abb📝";
+    let input = "Ramen";
+    let output = reverse(input);
+    let expected = "nemaR";
+    assert_eq!(output, expected);
+}
 
-    println!("{:?}", myCh.chars());
-    println!("{}", mem::size_of_val(myCh));
-    println!("{}", myCh.);
+pub fn reverse(input: &str) -> String {    
+    let mut res: String = String::new();
+
+    for ch in input.chars().rev() {
+        res.push(ch);
+    }
+
+    res
 }
