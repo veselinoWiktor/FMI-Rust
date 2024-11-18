@@ -10,7 +10,7 @@ pub struct MapIter<I, F> {
 impl<I, F, T, U> MapIter<I, F>
 where
     I: Iterator<Item = T>,
-    F: Fn(T) -> U,
+    F: FnMut(T) -> U,
 {
     pub fn new(iter: I, func: F) -> MapIter<I, F> {
         MapIter { iter, func }
@@ -20,7 +20,7 @@ where
 impl<I, F, T, U> Iterator for MapIter<I, F>
 where
     I: Iterator<Item = T>,
-    F: Fn(T) -> U,
+    F: FnMut(T) -> U,
 {
     type Item = U;
 
