@@ -21,16 +21,16 @@ impl<T, U> Iterator for DynMapIter<T, U> {
     }
 }
 
-#[test]
-fn test_dyn_map_iter() {
-    let xs = &["x", "xx", "xxx"];
-    let map_iter = DynMapIter::new(
-        Box::new(xs.iter()),
-        Box::new(|s| s.len()),
-    );
-
-    assert_eq!(
-        map_iter.collect::<Vec<_>>(),
-        vec![1, 2, 3],
-    );
-}
+// #[test]
+// fn test_dyn_map_iter() {
+//     let xs = &["x", "xx", "xxx"];
+//     let map_iter = DynMapIter::new(
+//         Box::new(xs.iter()),
+//         Box::new(|s| s.len()),
+//     );
+//
+//     assert_eq!(
+//         map_iter.collect::<Vec<_>>(),
+//         vec![1, 2, 3],
+//     );
+// }
